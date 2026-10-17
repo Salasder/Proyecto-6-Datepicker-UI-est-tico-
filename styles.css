@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+.contenedor {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.selector-fecha {
+    position: relative;
+    width: 220px;
+}
+
+.entrada-fecha {
+    display: flex;
+    width: 100%;
+    height: 38px;
+    border: 1px solid #888;
+    background-color: #fff;
+}
+
+.campo-fecha {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.boton-calendario {
+    width: 38px;
+    border: none;
+    border-left: 1px solid #888;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.icono-calendario {
+    font-size: 23px;
+}
+
+.calendario {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 220px;
+    background-color: #fff;
+    border: 1px solid #888;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.encabezado-calendario {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.nombre-mes {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.boton-mes {
+    border: none;
+    background: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    border-bottom: 1px solid #888;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.dias-semana span {
+    padding: 7px 0;
+}
+
+.dias-mes {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.dias-mes span {
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+}
+
+.dias-mes span:not(:empty):hover {
+    background-color: #e4efff;
+    color: #0066cc;
+}
